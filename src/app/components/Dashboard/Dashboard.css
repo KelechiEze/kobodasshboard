@@ -1,0 +1,91 @@
+.dashboard {
+    margin-left: 250px;
+    padding: 20px 30px;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+  }
+  
+  .dashboard__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .dashboard__card {
+    flex: 1 1 160px;
+    padding: 16px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    max-width: 180px;
+    min-height: 90px;
+  }
+  
+  .icon {
+    font-size: 24px;
+  }
+  
+  .link {
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Color Variants */
+  .green {
+    background-color: #4caf50;
+  }
+  .brown {
+    background-color: #bca66a;
+  }
+  .red {
+    background-color: #e57373;
+  }
+  .blue {
+    background-color: #90a4ed;
+  }
+  .yellow {
+    background-color: #fbc02d;
+  }
+  .teal {
+    background-color: #4dd0e1;
+  }
+  .light-blue {
+    background-color: #81d4fa;
+  }
+  .gray {
+    background-color: #b0bec5;
+  }
+  
+  /* 🌐 Mobile Responsiveness */
+  @media (max-width: 800px) {
+    .dashboard {
+      margin-left: 0;
+      padding: 16px;
+    }
+  
+    .dashboard__row {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .dashboard__card {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+  
+    .icon {
+      font-size: 20px;
+    }
+  
+    .link {
+      font-size: 11px;
+    }
+  }
+  
