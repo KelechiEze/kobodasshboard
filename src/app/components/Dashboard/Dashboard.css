@@ -15,7 +15,7 @@
   .dashboard__card {
     flex: 1 1 160px;
     padding: 16px;
-    border-radius: 12px;
+    border-radius: 5px;
     color: white;
     font-weight: 500;
     display: flex;
