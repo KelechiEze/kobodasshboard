@@ -1,0 +1,44 @@
+.customer-requests {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .customer-requests h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .customer-requests p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .request-card {
+    background-color: #fff;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+  }
+  
+  .request-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .request-card h4 {
+    margin: 0;
+    color: #222;
+    font-size: 1.2rem;
+  }
+  
+  .request-card p {
+    margin: 0.4rem 0;
+    color: #666;
+  }
+  
