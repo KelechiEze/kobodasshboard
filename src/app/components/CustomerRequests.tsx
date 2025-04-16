@@ -10,13 +10,13 @@ const CustomerRequests = () => {
 
       <div className="request-card">
         <h4>Request #1001</h4>
-        <p>Customer: John Doe</p>
+        <p>Customer: Chinedu Ebuks</p>
         <p>Status: Pending</p>
       </div>
 
       <div className="request-card">
         <h4>Request #1002</h4>
-        <p>Customer: Jane Smith</p>
+        <p>Customer: Zainab Usman</p>
         <p>Status: Approved</p>
       </div>
     </div>

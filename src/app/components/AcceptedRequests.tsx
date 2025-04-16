@@ -18,7 +18,7 @@ const AcceptedRequests = () => {
           <FaCheckCircle className="status-icon" />
           <h4>Request #2023</h4>
         </div>
-        <p>Customer: Michael Jordan</p>
+        <p>Customer: Ekene Jordan</p>
         <p>Status: ✅ Accepted</p>
       </div>
 
@@ -27,7 +27,7 @@ const AcceptedRequests = () => {
           <FaCheckCircle className="status-icon" />
           <h4>Request #2024</h4>
         </div>
-        <p>Customer: Serena Williams</p>
+        <p>Customer: Bose Adenuga</p>
         <p>Status: ✅ Accepted</p>
       </div>
     </div>
