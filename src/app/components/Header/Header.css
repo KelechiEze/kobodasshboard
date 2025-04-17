@@ -24,7 +24,6 @@
   
   .header__profile-img img,
   .header__logo img {
-    border-radius: 50%;
     object-fit: cover;
   }
   

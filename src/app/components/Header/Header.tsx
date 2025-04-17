@@ -14,7 +14,7 @@ const Header = () => {
           <Image src="/proff.png" alt="Profile" width={32} height={32} />
         </div>
         <div className="header__logo">
-          <Image src="/logo-text.png" alt="Kobo Logo" width={60} height={24} />
+          <Image src="/kobodash.png" alt="Kobo Logo" width={80} height={24} />
         </div>
       </div>
     </header>
