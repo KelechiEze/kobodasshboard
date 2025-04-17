@@ -16,15 +16,16 @@ interface SidebarSectionProps {
   title: string;
   items: { icon: React.ReactNode; label: string; href: string }[];
   onItemClick: (page: string) => void;
+  activePage: string;
 }
 
-const SidebarSection: React.FC<SidebarSectionProps> = ({ title, items, onItemClick }) => (
+const SidebarSection: React.FC<SidebarSectionProps> = ({ title, items, onItemClick, activePage }) => (
   <div className="sidebar__section">
     <p className="sidebar__section-title">{title}</p>
     {items.map((item, idx) => (
       <div
-        className="sidebar__link"
         key={idx}
+        className={`sidebar__link ${activePage === item.href ? "active" : ""}`}
         onClick={() => onItemClick(item.href)}
       >
         {item.icon}
@@ -37,6 +38,7 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({ title, items, onItemCli
 const Sidebar: React.FC<SidebarProps> = ({ setActivePage }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [activePage, setCurrentPage] = useState<string>("dashboard");
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,6 +53,12 @@ const Sidebar: React.FC<SidebarProps> = ({ setActivePage }) => {
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleItemClick = (page: string) => {
+    setCurrentPage(page);
+    setActivePage(page);
+    if (isMobile) setSidebarOpen(false);
   };
 
   return (
@@ -71,7 +79,8 @@ const Sidebar: React.FC<SidebarProps> = ({ setActivePage }) => {
           <SidebarSection
             title="Analytics"
             items={[{ icon: <FaChartBar />, label: "Analytics", href: "dashboard" }]}
-            onItemClick={setActivePage}
+            onItemClick={handleItemClick}
+            activePage={activePage}
           />
           <SidebarSection
             title="Operations"
@@ -82,7 +91,8 @@ const Sidebar: React.FC<SidebarProps> = ({ setActivePage }) => {
               { icon: <FaClipboardList />, label: "Trips", href: "trips" },
               { icon: <FaMoneyCheckAlt />, label: "Income Transactions", href: "income" },
             ]}
-            onItemClick={setActivePage}
+            onItemClick={handleItemClick}
+            activePage={activePage}
           />
           <SidebarSection
             title="Fleet Management"
@@ -93,7 +103,8 @@ const Sidebar: React.FC<SidebarProps> = ({ setActivePage }) => {
               { icon: <FaClipboardList />, label: "Issues", href: "issues" },
               { icon: <FaMoneyCheckAlt />, label: "Costs", href: "costs" },
             ]}
-            onItemClick={setActivePage}
+            onItemClick={handleItemClick}
+            activePage={activePage}
           />
           <SidebarSection
             title="Insurance"
@@ -101,14 +112,16 @@ const Sidebar: React.FC<SidebarProps> = ({ setActivePage }) => {
               { icon: <FaClipboardList />, label: "Policy Request", href: "policy-request" },
               { icon: <FaClipboardList />, label: "Subscriptions", href: "subscriptions" },
             ]}
-            onItemClick={setActivePage}
+            onItemClick={handleItemClick}
+            activePage={activePage}
           />
           <SidebarSection
             title="Support"
             items={[
               { icon: <MdOutlineSupportAgent />, label: "Support", href: "support" },
             ]}
-            onItemClick={setActivePage}
+            onItemClick={handleItemClick}
+            activePage={activePage}
           />
         </nav>
 
