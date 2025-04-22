@@ -1,29 +1,42 @@
+/* Base styles for the header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 20px 30px;
-    height: 60px;
-    margin-left: 250px; /* To offset sidebar width */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px 30px;
+  height: 60px;
+  margin-left: 250px; /* Offset for desktop sidebar */
+  width: calc(100% - 250px); /* Prevent overflow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* Title styling */
+.header__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f1c2e;
+  margin: 0;
+}
+
+/* Right section of the header (profile, logo, etc.) */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Ensures profile and logo images scale correctly */
+.header__profile-img img,
+.header__logo img {
+  object-fit: cover;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    margin-left: 0;
+    width: 100%;
   }
-  
-  .header__title {
-    font-size: 22px;
-    font-weight: 600;
-    color: #0f1c2e;
-    margin: 0;
-  }
-  
-  .header__right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .header__profile-img img,
-  .header__logo img {
-    object-fit: cover;
-  }
-  
+}

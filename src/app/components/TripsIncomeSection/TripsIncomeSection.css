@@ -1,21 +1,26 @@
 .trips-income-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   margin-top: 30px;
   padding: 24px;
   background-color: #f9fbfd;
   justify-content: space-between;
-  flex-wrap: wrap;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .chart-container,
 .income-container {
   flex: 1 1 45%;
+  min-width: 300px;
   background-color: #fff;
   padding: 24px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  min-width: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .chart-container h4,
@@ -41,6 +46,7 @@
   text-align: center;
   padding: 20px;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .income-placeholder:hover {
@@ -48,16 +54,18 @@
   border-color: #ccc;
 }
 
-/* Responsive: Stack vertically on small screens */
+/* 📱 Responsive for Mobile Devices */
 @media (max-width: 800px) {
   .trips-income-wrapper {
     flex-direction: column;
     align-items: stretch;
+    padding: 16px;
   }
 
   .chart-container,
   .income-container {
     width: 100%;
     max-width: 100%;
+    flex: 1 1 100%;
   }
 }

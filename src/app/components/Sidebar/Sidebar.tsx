@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
@@ -42,8 +42,9 @@ const Sidebar: React.FC<SidebarProps> = ({ setActivePage }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-      if (window.innerWidth > 768) setSidebarOpen(true);
+      const isNowMobile = window.innerWidth <= 768;
+      setIsMobile(isNowMobile);
+      setSidebarOpen(!isNowMobile); // Open by default on desktop, closed on mobile
     };
 
     window.addEventListener("resize", handleResize);
@@ -68,6 +69,8 @@ const Sidebar: React.FC<SidebarProps> = ({ setActivePage }) => {
           {isSidebarOpen ? <FaTimes /> : <FaBars />}
         </button>
       )}
+
+      {isMobile && isSidebarOpen && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}
 
       <div className={`sidebar ${isSidebarOpen ? "show" : "hide"}`}>
         <div className="sidebar__top">

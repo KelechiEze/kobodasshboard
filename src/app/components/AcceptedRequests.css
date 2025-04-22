@@ -1,66 +1,82 @@
 .accepted-requests {
-    padding: 2rem;
-    background: linear-gradient(135deg, #e9f5ff, #ffffff);
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e9f5ff, #ffffff);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.greeting-icon {
+  color: #4caf50;
+  font-size: 2rem;
+}
+
+.accepted-requests h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+.subtext {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.accepted-card {
+  background-color: #ffffff;
+  border-left: 6px solid #4caf50;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.accepted-card:hover {
+  transform: scale(1.02);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.status-icon {
+  color: #4caf50;
+  font-size: 1.2rem;
+}
+
+.accepted-card p {
+  margin: 0.4rem 0;
+  color: #444;
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 800px) {
+  .accepted-requests {
+    padding: 1rem;
   }
-  
-  .greeting {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .greeting-icon {
-    color: #4caf50;
-    font-size: 2rem;
-  }
-  
-  .accepted-requests h2 {
-    font-size: 1.8rem;
-    color: #333;
-  }
-  
-  .subtext {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 2rem;
-  }
-  
+
   .accepted-card {
-    background-color: #ffffff;
-    border-left: 6px solid #4caf50;
-    border-radius: 8px;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    width: 100%;
   }
-  
-  .accepted-card:hover {
-    transform: scale(1.02);
-  }
-  
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .card-header h4 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #2c3e50;
-  }
-  
-  .status-icon {
-    color: #4caf50;
-    font-size: 1.2rem;
-  }
-  
-  .accepted-card p {
-    margin: 0.4rem 0;
-    color: #444;
-  }
-  
+}
