@@ -1,0 +1,216 @@
+.signup-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: row; /* Default layout for larger screens */
+}
+
+.signup-form-section {
+  flex: 1;
+  background-color: #f8f9fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for a more polished look */
+  border-radius: 8px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 2rem; /* Increased size */
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333; /* Darker color for logo */
+}
+
+.form-title {
+  font-size: 25px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.signup-form {
+  width: 100%;
+  max-width: 400px; /* Increased max-width for better readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-form input {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem; /* Increased bottom margin for spacing */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 350px; /* Reduced the input field length */
+  background-color: #fff; /* White background for inputs */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  color: #333; /* Text color set to dark gray */
+}
+
+.signup-form input::placeholder {
+  color: #aaa; /* Placeholder color */
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+  max-width: 350px; /* Consistent width with other input fields */
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.privacy-text {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #555;
+}
+
+.privacy-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-button {
+  background-color: #3a8ef6;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #0056d2;
+}
+
+/* Spinner styles when button is loading */
+.signup-button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+  position: relative;
+}
+
+/* Spinner animation inside the button */
+.signup-button:disabled::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Spinner animation keyframes */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-link {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-image-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%); /* Darkens the image */
+}
+
+.signup-image-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark grey overlay */
+  z-index: 1;
+}
+
+.signup-image-section img {
+  z-index: -1; /* Ensure the image stays behind the overlay */
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 800px) {
+  .signup-container {
+    flex-direction: column; /* Stack form and image vertically */
+  }
+
+  .signup-form-section {
+    padding: 1.5rem; /* Reduced padding on mobile for better use of space */
+    width: 100%; /* Make the form take full width on smaller screens */
+    box-shadow: none; /* Remove box-shadow for a cleaner look on mobile */
+    border-radius: 0; /* No rounded corners on mobile */
+  }
+
+  .form-title {
+    font-size: 22px; /* Slightly smaller title for mobile */
+  }
+
+  .signup-form {
+    width: 90%; /* Reduced width for form on mobile */
+    max-width: 400px;
+  }
+
+  .signup-button {
+    font-size: 1rem; /* Slightly smaller button text */
+    padding: 0.7rem; /* Reduced button padding on mobile */
+  }
+
+  .signup-image-section {
+    width: 100%;
+    height: auto;
+  }
+
+  .signup-image {
+    height: 250px; /* Reduced height of the image on mobile */
+    object-fit: cover;
+  }
+
+  .login-link {
+    font-size: 0.8rem; /* Smaller font size for the login link */
+  }
+}

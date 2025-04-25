@@ -1,0 +1,199 @@
+/* Main container */
+.login-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Left side: Form */
+  .login-form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center elements horizontally */
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .login-form-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .login-form-section p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .login-form-section a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .logo img {
+    width: 150px; /* Adjusted logo size */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 380px; /* Adjusted form width */
+  }
+  
+  .login-form input {
+    padding: 12px;
+    margin-bottom: 20px; /* Increased margin between inputs */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 350px; /* Reduced the length of the input fields */
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+  }
+  
+  .login-form input::placeholder {
+    color: #aaa; /* Placeholder color */
+  }
+  
+  /* Password field */
+  .password-field {
+    position: relative;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  /* Form options (Remember me / Forgot password) */
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .form-options label {
+    display: flex;
+    align-items: center;
+    color: #333;
+  }
+  
+  .form-options a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Submit button */
+  .login-form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Right side: Image */
+  .login-image-section {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .login-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%); /* Darkens the image */
+  }
+  
+  .login-image-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark grey overlay */
+    z-index: 1;
+  }
+  
+  .login-image-section img {
+    z-index: -1; /* Ensure the image stays behind the overlay */
+  }
+
+  .spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+    /* Responsive for screens 800px and below */
+  @media (max-width: 800px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .login-form-section {
+      width: 100%;
+      padding: 30px 20px;
+      margin-bottom: 30px; /* Added margin bottom to add space */
+    }
+  
+    .login-image-section {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .login-image-section img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .login-form {
+      max-width: 100%; /* Full width for mobile */
+    }
+  
+    .logo img {
+      width: 120px; /* Adjusted logo size for mobile */
+    }
+  }
+  
