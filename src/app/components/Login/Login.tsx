@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import Image from 'next/image';
-import Link from 'next/link'; 
+import Link from 'next/link'; // Importing Link
 
 interface LoginProps {
   setActivePage: React.Dispatch<React.SetStateAction<string>>;
