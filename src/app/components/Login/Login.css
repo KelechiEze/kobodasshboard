@@ -36,10 +36,12 @@
     text-decoration: none;
   }
   
-  .logo img {
-    width: 150px; /* Adjusted logo size */
-    height: auto;
-    margin-bottom: 20px;
+  .logo-login {
+    font-weight: bold;
+    font-size: 2rem; /* Increased size */
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333; /* Darker color for logo */
   }
   
   /* Form */
@@ -89,7 +91,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
   .form-options label {
@@ -119,38 +121,34 @@
     background-color: #0056b3;
   }
   
-  /* Right side: Image */
-  .login-image-section {
-    flex: 1;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
   
-  .login-image-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(50%); /* Darkens the image */
-  }
-  
-  .login-image-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Dark grey overlay */
-    z-index: 1;
-  }
-  
-  .login-image-section img {
-    z-index: -1; /* Ensure the image stays behind the overlay */
-  }
+.login-image-section {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%); /* Darkens the image */
+}
+
+.login-image-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark grey overlay */
+  z-index: 1;
+}
+
+.login-image-section img {
+  z-index: -1; /* Ensure the image stays behind the overlay */
+}
 
   .spinner {
     border: 6px solid #f3f3f3;

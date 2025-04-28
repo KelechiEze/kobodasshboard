@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import './PasswordRecovery.css';
 import { FaArrowLeft } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link'; 
 
 interface PasswordRecoveryProps {
   setActivePage: React.Dispatch<React.SetStateAction<string>>;
@@ -32,12 +33,12 @@ const PasswordRecovery: React.FC<PasswordRecoveryProps> = ({ setActivePage }) =>
           <Image
             src="/guudlogo.png"
             alt="The Social Good Co. Logo"
-            width={150}
-            height={150}
+            width={151}
+            height={151}
             priority
           />
         </div>
-        <h3>Recover your password</h3>
+        <h3>Reset your password</h3>
         <p>
           Fill in your e-mail address below and we’ll send
           you an email with instructions.
@@ -56,28 +57,28 @@ const PasswordRecovery: React.FC<PasswordRecoveryProps> = ({ setActivePage }) =>
           <div className="spinner" />
         ) : (
           <button className="recovery-button" onClick={handleRecovery}>
-            Recover your password
+            Reset your password
           </button>
         )}
 
         <div className="links">
-          <a href="#" onClick={() => setActivePage('login')}>
+          <Link href="/login">
             <FaArrowLeft /> Already have an account?
-          </a>
-          <a href="#" onClick={() => setActivePage('signup')}>
+          </Link>
+          <Link href="/signup">
             <FaArrowLeft /> Don’t have an account?
-          </a>
+          </Link>
         </div>
       </div>
 
-      <div className="signup-image-section">
+      <div className="passwordreset-section">
         <Image
           src="/brownsmile.jpg"
           alt="Customer support agent"
           width={800}
           height={600}
           priority
-          className="signup-image"
+          className="passwordreset-image"
         />
       </div>
     </div>

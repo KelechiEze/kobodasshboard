@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import Image from 'next/image';
+import Link from 'next/link'; 
 
 interface LoginProps {
   setActivePage: React.Dispatch<React.SetStateAction<string>>;
@@ -25,7 +26,7 @@ const Login: React.FC<LoginProps> = ({ setActivePage }) => {
   return (
     <div className="login-container">
       <div className="login-form-section">
-        <div className="logo">
+        <div className="logo-login">
           <Image
             src="/guudlogo.png"
             alt="The Social Good Co. Logo"
@@ -47,32 +48,32 @@ const Login: React.FC<LoginProps> = ({ setActivePage }) => {
                 <input type="checkbox" />
                 Remember me
               </label>
-              <a href="#" onClick={() => setActivePage('passwordrecovery')}>
+              <Link href="/passwordrecovery">
                 Forgot password?
-              </a>
+              </Link>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" className="signup-button">Login</button>
           </form>
         )}
 
         {!isLoading && (
           <p>
             Don’t have an account?{' '}
-            <a href="#" onClick={() => setActivePage('signup')}>
+            <Link href="/signup">
               Sign Up Free!
-            </a>
+            </Link>
           </p>
         )}
       </div>
 
-      <div className="signup-image-section">
+      <div className="login-image-section">
         <Image
           src="/brownsmile.jpg"
           alt="Customer support agent"
           width={800}
           height={600}
           priority
-          className="signup-image"
+          className="login-image"
         />
       </div>
     </div>

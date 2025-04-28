@@ -1,0 +1,75 @@
+.why-choose-us {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: #000;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .feature {
+    max-width: 260px;
+    flex: 1 1 220px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: #fbbf24; /* amber-400 */
+    margin-bottom: 1rem;
+  }
+  
+  .feature h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.7rem;
+  }
+  
+  .feature p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+      width: 100%;
+    }
+  
+    .icon {
+      margin: 0 0 1rem 0;
+      font-size: 2rem;
+    }
+  }
+  

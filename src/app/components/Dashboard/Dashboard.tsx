@@ -4,7 +4,6 @@ import React from "react";
 import "./Dashboard.css";
 import CustomerRequests from "@/app/components/CustomerRequests";
 import AcceptedRequests from "@/app/components/AcceptedRequests";
-
 import TripsIncomeSection from "@/app/components/TripsIncomeSection/TripsIncomeSection";
 
 import {
@@ -29,7 +28,6 @@ const Dashboard: React.FC<DashboardProps> = ({ activePage }) => {
     <div className="dashboard">
       {activePage === "dashboard" && (
         <>
-
           <div className="dashboard__row">
             <div className="dashboard__card green">
               <FaWallet className="icon" />
@@ -77,6 +75,7 @@ const Dashboard: React.FC<DashboardProps> = ({ activePage }) => {
               <p>Trucks<br />0</p>
             </div>
           </div>
+
           <div className="dashboard__row">
             <div className="dashboard__card gray">
               <FaUser className="icon" />

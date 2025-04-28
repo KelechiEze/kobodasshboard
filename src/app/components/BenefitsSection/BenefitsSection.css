@@ -1,0 +1,85 @@
+.benefits-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .benefits-title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    color: #111;
+  }
+  
+  .benefits-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .benefit-box {
+    border: 1px solid #7c9bcae4; /* Tailwind's gray-300 */
+    border-radius: 10px;
+    padding: 2rem;
+    flex: 1 1 350px;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .benefit-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefit-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .benefit-box li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;       /* Use gap for consistent spacing */
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    color: #111;
+    flex-wrap: nowrap;  /* Prevent icon/text wrapping */
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+    stroke-width: 2;
+    fill: none;
+    flex-shrink: 0;     /* Prevent icon from shrinking */
+  }
+  
+  /* Icon colors */
+  .blue {
+    stroke: #6366f1; /* Tailwind's indigo-500 */
+  }
+  
+  .amber {
+    stroke: #f59e0b; /* Tailwind's amber-500 */
+  }
+  
+  @media (max-width: 768px) {
+    .benefits-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .benefit-box {
+      width: 90%;
+      max-width: 380px;
+    }
+  
+    .benefit-box li {
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: nowrap;    /* Enforces inline layout on smaller screens */
+      font-size: 0.95rem;       /* Optional: slightly increase font for legibility */
+    }
+  }
+  

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Image from "next/image";
 import "./SignUpPage.css";
+import Link from "next/link"; 
 
 interface SignUpPageProps {
   setActivePage: React.Dispatch<React.SetStateAction<string>>;
@@ -71,9 +72,9 @@ const SignUpPage: React.FC<SignUpPageProps> = ({ setActivePage }) => {
 
           <p className="login-link">
             Already have an account?{" "}
-            <a href="#" onClick={() => setActivePage("login")}>
+            <Link href="/login">
               Login
-            </a>
+            </Link>
           </p>
         </form>
       </div>
